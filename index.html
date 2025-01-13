@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation using API</title>
+</head>
+<body>
+    <h1>Validation Using API</h1>
+    <label>Enter your Amount: <input type="number" id="value" min="100" max="100000">
+    </label>
+        <button onclick="checkTransaction()">Check Transaction</button>
+    <p id="output"></p>
+
+
+    <script>
+        function checkTransaction(){
+            let inp = document.getElementById("value");
+            if(!inp.checkValidity()){
+                document.getElementById("output").innerHTML = inp.validationMessage;
+
+            }
+            else{
+                document.getElementById("output").innerHTML = "You can do Transaction";
+            }
+        }
+    </script>
+</body>
+</html>
